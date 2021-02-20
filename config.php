@@ -4,7 +4,7 @@
  */
 
 $databaseHost = 'localhost';
-$databaseName = 'db_import';
+$databaseName = 'cetak';
 $databaseUsername = 'root';
 $databasePassword = '';
 

@@ -1,44 +1,44 @@
 <?php
 include_once("config.php");
 
-        if(isset($_POST['tampil'])){
-            if(empty($_POST['checkbox_list'])){
-                echo"Pilih dong ...";
-            }
-            else{
-                echo "Anda memilih;<br/><br/>"; 
-                foreach($_POST['checkbox_list'] as $item){  
+        // if(isset($_POST['tampil'])){
+        //     if(empty($_POST['checkbox_list'])){
+        //         echo"Pilih dong ...";
+        //     }
+        //     else{
+        //         echo "Anda memilih;<br/><br/>"; 
+        //         foreach($_POST['checkbox_list'] as $item){  
                     
-                  $id = $item;
-                  $result = mysqli_query($mysqli, "SELECT * FROM tabel_barang WHERE id=$id");
-                    while($user_data = mysqli_fetch_array($result))
-                      {
-                          $kd_barang = $user_data['kd_barang'];
-                          $nm_barang =$user_data['nm_barang'];
-                          $satuan = $user_data['satuan'];
-                          $hrg_beli = $user_data['hrg_beli'];
-                          $hrg_jual = $user_data['hrg_jual'];
-                          $kategori = $user_data['kategori'];
-                          $supplier = $user_data['supplier'];
-                      }
-                      echo $kd_barang ."<br/>";
-                      echo $nm_barang ."<br/>";
-                      echo $hrg_jual ."<br/>";
-                }
-            }
-        }
+        //           $id = $item;
+        //           $result = mysqli_query($mysqli, "SELECT * FROM tabel_barang WHERE id=$id");
+        //             while($user_data = mysqli_fetch_array($result))
+        //               {
+        //                   $kd_barang = $user_data['kd_barang'];
+        //                   $nm_barang =$user_data['nm_barang'];
+        //                   $satuan = $user_data['satuan'];
+        //                   $hrg_beli = $user_data['hrg_beli'];
+        //                   $hrg_jual = $user_data['hrg_jual'];
+        //                   $kategori = $user_data['kategori'];
+        //                   $supplier = $user_data['supplier'];
+        //               }
+        //               echo $kd_barang ."<br/>";
+        //               echo $nm_barang ."<br/>";
+        //               echo $hrg_jual ."<br/>";
+        //         }
+        //     }
+        // }
     ?>
 
     
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Cetak Barcode</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
- -->
-<!-- <div class="header">
+
+<div class="header">
   <div class="container">
    <div class="navbar">
     <div class="brand">
@@ -63,11 +63,11 @@ include_once("config.php");
     </div>
    </div>
   </div>
- </div> -->
+ </div>
 
-<!-- <br>
-<table  > -->
-      <!-- <?php
+<br>
+<table  >
+      <?php
       $kolom = 6;    
       $i=1;       
       $result=mysqli_query($mysqli,"SELECT * FROM tabel_barang");
@@ -81,8 +81,8 @@ include_once("config.php");
         $supplier = $data['supplier'];
         if(($i) % $kolom== 1) {    
         echo'<tr bgcolor="#42f584">';     
-        }  ?> -->
-        <!-- <td colspan="2" width="230">
+        }  ?>
+        <td colspan="2" width="230">
         <center><b><?php echo $nm_barang; ?></b></center>
      
         <font size="6"> <center><b>Rp <?php echo number_format($hrg_jual, 0, ',', '.') ?>  
@@ -92,20 +92,20 @@ include_once("config.php");
         <center><b><?php echo $kd_barang; ?></b> </center>
 
          <font color="red">Al-Khaibar : <?php echo date('d.m.Y'); ?></font>
-        </td> -->
-        <!-- <?php
+        </td>
+        <?php
         if(($i) % $kolom== 0) {    
         echo'</tr>';        
         }
       $i++;
       }
-      ?> -->
-    <!-- </table>
+      ?>
+    </table>
 <br/>
 <button><a href="#" onclick="window.print()"> PRINT </a></button>
-<button><a href="index.php"> BACK </a></button> -->
+<button><a href="index.php"> BACK </a></button>
 
-<!-- <?php
+   <!--  <?php
       $kolom = 6;    
       $i=1;       
       $result=mysqli_query($mysqli,"SELECT * FROM tabel_barang");
@@ -139,6 +139,5 @@ echo '<table border="5" bgcolor="#42f584">';
       $i++;
       }
       ?> -->
-<!-- 
 </body>
-</html> -->
+</html>
